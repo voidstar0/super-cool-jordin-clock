@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        color: white;
+        z-index: 999;
+        position: absolute;
+        left: 10px;
+        font-family:'Courier New', Courier, monospace;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="minutes"></canvas>
+    <canvas id="hours"></canvas>
+    <p style="top: 10px;">Mouse Wheel: Zoom</p>
+    <p style="top: 28px;">Left Click: Rotate</p>
+    <p style="top: 46px;">Right Click: Move</p>
+    <script src="js/jordin.js"></script>
+</body>
+</html>
