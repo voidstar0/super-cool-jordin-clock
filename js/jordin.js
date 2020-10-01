@@ -54,13 +54,23 @@ camera.position.z = 600;
 controls.update();
 
 const changeCanvas = () => {
+    const date = new Date();
+
+    let hours = date.getHours() % 12;
+
+    if (hours == 0) {
+        hours = 12;
+    }
+
+    const minutes = date.getMinutes();
+
     ctx.font = '900 80px Orbitron';
     ctx.fillStyle = '#3665ff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'black';
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(new Date().getHours() - 12, canvas.width / 2, canvas.height / 2);
+    ctx.fillText(hours, canvas.width / 2, canvas.height / 2);
 
     ctx2.font = '700 80px Orbitron';
     ctx2.fillStyle = '#fe0000';
@@ -68,7 +78,7 @@ const changeCanvas = () => {
     ctx2.fillStyle = 'black';
     ctx2.textAlign = "center";
     ctx2.textBaseline = "middle";
-    ctx2.fillText(new Date().getMinutes(), canvas2.width / 2, canvas2.height / 2);
+    ctx2.fillText(minutes, canvas2.width / 2, canvas2.height / 2);
 }
 
 const animate = () => {
